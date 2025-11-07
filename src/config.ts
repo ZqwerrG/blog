@@ -41,7 +41,7 @@ export const siteConfig: SiteConfig = {
 		ignoreTags: ["script", "style", "code", "pre"], // 翻译时忽略的 HTML 标签
 	},
 	bangumi: {
-		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
+		userId: "sai", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 	},
 
 	anime: {
@@ -128,11 +128,8 @@ export const siteConfig: SiteConfig = {
 	},
 	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
 	favicon: [
-		// 留空以使用默认 favicon
 		{
-			src: "/favicon/icon.png", // 图标文件路径（相对于 public）
-			// theme: 'light',        // 可选，指定主题 'light' | 'dark'
-			// sizes: '32x32',        // 可选，图标大小
+			src: "/favicon.ico",
 		},
 	],
 
@@ -216,12 +213,17 @@ export const navBarConfig: NavBarConfig = {
 			url: "/content/",
 			icon: "material-symbols:person",
 			children: [
-				LinkPreset.Anime,
-				LinkPreset.Diary,
 				{
-					name: "Gallery",
-					url: "/albums/",
-					icon: "material-symbols:photo-library",
+					name: "主页",
+					url: "https://zghome.top",
+					external: true,
+					icon: "material-symbols:home",
+				},
+				{
+					name: "网盘",
+					url: "https://pan.zghome.top",
+					external: true,
+					icon: "material-symbols:cloud",
 				},
 			],
 		},
@@ -261,11 +263,6 @@ export const profileConfig: ProfileConfig = {
 	name: "Mizuki",
 	bio: "The world is big, you have to go and see",
 	links: [
-		{
-			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
 		{
 			name: "Gitee",
 			icon: "mdi:git",
