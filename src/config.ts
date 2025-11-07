@@ -18,10 +18,10 @@ import { getTranslateLanguageFromConfig } from "./utils/language-utils";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
-const SITE_LANG = "en"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
-	title: "Mizuki",
+	title: "Zqq",
 	subtitle: "One demo website",
 
 	lang: SITE_LANG,
@@ -43,9 +43,9 @@ export const siteConfig: SiteConfig = {
 	bangumi: {
 		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 	},
-  
+
 	anime: {
-		mode: "local", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
+		mode: "bangumi", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
 	},
 
 	banner: {
@@ -94,7 +94,7 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "Beautiful Mizuki!", // 主页横幅主标题
+			title: "欢迎来到Zqq的blog", // 主页横幅主标题
 
 			subtitle: [
 				"A Showcase Demo Site",
@@ -129,11 +129,11 @@ export const siteConfig: SiteConfig = {
 	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
 	favicon: [
 		// 留空以使用默认 favicon
-		// {
-		//   src: '/favicon/icon.png',    // 图标文件路径
-		//   theme: 'light',              // 可选，指定主题 'light' | 'dark'
-		//   sizes: '32x32',              // 可选，图标大小
-		// }
+		{
+			src: "/favicon/icon.png", // 图标文件路径（相对于 public）
+			// theme: 'light',        // 可选，指定主题 'light' | 'dark'
+			// sizes: '32x32',        // 可选，图标大小
+		},
 	],
 
 	// 字体配置
@@ -297,10 +297,10 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: true, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
-		lang: "en", // 设置 Twikoo 评论系统语言为英文
+		lang: "zh_CN", // 设置 Twikoo 评论系统语言为英文
 	},
 };
 
@@ -424,7 +424,6 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 				collapseThreshold: 20,
 			},
 		},
-
 	],
 
 	// 默认动画配置
@@ -485,7 +484,7 @@ export const sakuraConfig: SakuraConfig = {
 
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
-	enable: false, // 启用看板娘
+	enable: true, // 启用看板娘
 	models: ["/pio/models/pio/model.json"], // 默认模型路径
 	position: "left", // 默认位置在右侧
 	width: 280, // 默认宽度
@@ -519,9 +518,9 @@ export const widgetConfigs = {
 } as const;
 
 export const umamiConfig = {
-	enabled: false, // 是否显示Umami统计
-	shareURL: "https://us.umami.is/api/share/ABCD1234", //你的分享API,支持自建服务
+	enabled: true, // 是否显示Umami统计
+	shareURL: "https://tj.zghome.top/share/F8sQYBPumU2JJyqr/blog.zghome.top", //你的分享API,支持自建服务
 	scripts: `
-<script defer src="XXXX.XXX" data-website-id="ABCD1234"></script>
+<script defer src="https://tj.zghome.top/script.js" data-website-id="2987e185-4226-48a2-af09-e1fa69fd8dc6"></script>
   `.trim(), //上面填你要插入的Script,不用再去Layout中插入
 } as const;
