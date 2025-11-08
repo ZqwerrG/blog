@@ -1,0 +1,17 @@
+name = "mizuki-blog"
+main = "dist/_worker.js/index.js"
+workers_dev = true
+compatibility_date = "2024-11-08"
+
+# If you use custom domain
+# routes = [ { pattern = "blog.example.com/*", zone_name = "example.com" } ]
+
+[build]
+command = "pnpm run build"
+
+[site]
+bucket = "dist"
+
+# If you need environment variables
+# [vars]
+# NODE_ENV = "production"

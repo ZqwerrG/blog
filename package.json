@@ -7,6 +7,8 @@
 		"start": "astro dev",
 		"check": "astro check",
 		"build": "astro build && pagefind --site dist",
+		"build:cf": "ASTRO_ADAPTER=@astrojs/cloudflare astro build && pagefind --site dist",
+		"deploy:cf": "wrangler deploy",
 		"preview": "astro preview",
 		"astro": "astro",
 		"type-check": "tsc --noEmit --isolatedDeclarations",
@@ -68,6 +70,7 @@
 		"unist-util-visit": "^5.0.0"
 	},
 	"devDependencies": {
+		"@astrojs/cloudflare": "^12.6.10",
 		"@astrojs/ts-plugin": "^1.10.4",
 		"@biomejs/biome": "2.2.4",
 		"@iconify-json/mdi": "^1.2.3",
@@ -77,7 +80,8 @@
 		"@types/mdast": "^4.0.4",
 		"@types/sanitize-html": "^2.16.0",
 		"postcss-import": "^16.1.1",
-		"postcss-nesting": "^13.0.2"
+		"postcss-nesting": "^13.0.2",
+		"wrangler": "^4.46.0"
 	},
 	"packageManager": "pnpm@9.14.4"
 }

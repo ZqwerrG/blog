@@ -5,6 +5,8 @@ import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-s
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import swup from "@swup/astro";
 import { defineConfig } from "astro/config";
+// Cloudflare Workers adapter import
+import cloudflare from "@astrojs/cloudflare";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -27,6 +29,8 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 // https://astro.build/config
 export default defineConfig({
+	// Add Cloudflare adapter so build outputs a Worker entry in dist/_worker.js
+	adapter: cloudflare(),
 	site: "https://mizuki.mysqil.com/",
 
 	base: "/",
