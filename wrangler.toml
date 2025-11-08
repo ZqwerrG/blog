@@ -1,4 +1,4 @@
-name = "mizuki-blog"
+name = "blog"
 main = "dist/_worker.js/index.js"
 workers_dev = true
 compatibility_date = "2024-11-08"
