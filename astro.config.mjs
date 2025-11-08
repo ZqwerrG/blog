@@ -29,7 +29,12 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 // https://astro.build/config
 export default defineConfig({
 	// Add Cloudflare adapter so build outputs a Worker entry in dist/_worker.js
-	adapter: cloudflare(),
+	adapter: cloudflare({
+		mode: "directory",
+		platformProxy: {
+			enabled: false,
+		},
+	}),
 	site: "https://mizuki.mysqil.com/",
 
 	base: "/",
