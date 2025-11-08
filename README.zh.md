@@ -167,7 +167,7 @@
 部署前，请在 `astro.config.mjs` 中更新 `site` URL。
 
 ## 📝 文章前言格式
-
+1
 ```yaml
 ---
 title: 我的第一篇博客文章
@@ -252,8 +252,8 @@ Mizuki 支持超越标准 GitHub Flavored Markdown 的增强功能：
 
 ```typescript
 export const siteConfig: SiteConfig = {
-  title: "您的博客名称",
-  subtitle: "您的博客描述",
+  title: "  Zqq's Blog",
+  subtitle: "博客",
   lang: "zh-CN", // 或 "en"、"ja" 等
   themeColor: {
     hue: 210, // 0-360，主题色调

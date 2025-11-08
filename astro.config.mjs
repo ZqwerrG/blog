@@ -35,7 +35,7 @@ export default defineConfig({
 			enabled: false,
 		},
 	}),
-	site: "https://mizuki.mysqil.com/",
+	site: "https://blog.zghome.top/",
 
 	base: "/",
 	trailingSlash: "always",
